@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:xsd="http://www.w3.org/2000/10/XMLSchema#"
+  xml:base="http://www.hozo.jp/rdf/expanded anatomical ontology_HOZO_20190405.xml"
+>
+
+<rdfs:Class rdf:ID="WholnessConcept">
+  <rdfs:label>WholenessConcept</rdfs:label>
+</rdfs:Class>
+<rdfs:Class rdf:ID="RelationalConcept">
+  <rdfs:label>RelationalConcept</rdfs:label>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Any">
+  <rdfs:label>Any</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#WholnessConcept" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_body_part__form_CONAND">
+  <rdfs:label>human body part  form CONAND</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_body" />
+  <rdfs:comment>
+旧名称：器官一般．  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_structure_【anatomical_structure】">
+  <rdfs:label>human structure 【anatomical structure】</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_structure" />
+  <rdfs:comment>
+2012.11.01
+旧名称：人体構造物．上位を「器官」から「人体構造物」と改称し，本名称は人体構造物【解剖構造物】とした．  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_general_structure">
+  <rdfs:label>human general structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_structure_【anatomical_structure】" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_hollow_structure">
+  <rdfs:label>human hollow structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_general_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="cell_related_structure">
+  <rdfs:label>cell related structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_structure_【anatomical_structure】" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="cell">
+  <rdfs:label>cell</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#cell_related_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="differentiated_cell">
+  <rdfs:label>differentiated cell</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#cell" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="connective_tissue_cells">
+  <rdfs:label>connective tissue cells</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#differentiated_cell" />
+  <rdfs:comment>
+結合組織細胞
+ケツゴウソシキサイボウ
+------------------------------------------------
+[英] connective tissue cells
+[ラ] cellulae textus connectivi
+[同義語] 結合織細胞
+
+結合組織を構成する細胞成分は固着性細胞群と遊走性細胞群に分けられる。固着性細胞には線維芽細胞，脂肪細胞，組織固着性のマクロファージ（組織球）がある。線維芽細胞は膠原線維に加えて細網線維，弾性線維を産生する。脂肪細胞は中性脂肪を蓄え，集団をなして脂肪組織を構成するが，胎児や新生児では皮下の特定の領域に，寒冷時に積極的に発熱して体温維持に機能する特異な脂肪細胞である褐色脂肪細胞が存在する。通常の脂肪組織と異なり，褐色脂肪の量は栄養状態に左右されない。遊走性細胞にはマクロファージ，肥満細胞，形質細胞，リンパ性遊走細胞，樹状細胞，好酸性白血球などがあり，いずれも炎症反応や外来異物の認識，膠原提示，抗体産生などの免疫応答に関わり，生体防御に重要な働きをしている。これらの細胞はいずれも間葉由来であるが，このほかに結合組織には神経堤に由来する外胚葉性の色素細胞（メラノサイト）も存在する。
+医学書院 医学大辞典 cD-ROM (c) 2003 IGAKU-sHOIN tokyo  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="smooth_muscle_cell">
+  <rdfs:label>smooth muscle cell</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#connective_tissue_cells" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="YAMATO">
+  <rdfs:label>YAMATO</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#Any" />
+  <rdfs:comment>
+this needs further elaboration.
+Anyway, this is what entities need to exist in the real world.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="sac-like_structure">
+  <rdfs:label>sac-like structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_hollow_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="tubular_structure">
+  <rdfs:label>ｔubular structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_hollow_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="fixing_function">
+  <rdfs:label>fixing function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="holding_Function">
+  <rdfs:label>holding Function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="keeping_function">
+  <rdfs:label>keeping function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#holding_Function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="reserve_function">
+  <rdfs:label>reserve function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#holding_Function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="passing_function">
+  <rdfs:label>passing function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="supporting_function">
+  <rdfs:label>supporting function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="boundary_function">
+  <rdfs:label>boundary function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="backflow_preventing_function">
+  <rdfs:label>backflow preventing function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="barrier_function">
+  <rdfs:label>barrier function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="prevent_invasion_function">
+  <rdfs:label>prevent invasion function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#barrier_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="prevent_effusion_function">
+  <rdfs:label>prevent effusion function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#barrier_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="connecting_function">
+  <rdfs:label>connecting function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="one-degree-connect">
+  <rdfs:label>one-degree-connect</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#connecting_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="two-degree-connect">
+  <rdfs:label>two-degree-connect</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#connecting_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="tubular_structure_with_extensibility">
+  <rdfs:label>ｔubular structure with extensibility</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#tubular_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="physical_function">
+  <rdfs:label>physical function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#physicochemical_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="physicochemical_function">
+  <rdfs:label>physicochemical function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="function">
+  <rdfs:label>function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#role" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="gate-type_structure">
+  <rdfs:label>gate-type structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_hollow_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="ureter">
+  <rdfs:label>ureter</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#ureter_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="urethra">
+  <rdfs:label>urethra</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#ureter_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="physiological_organ">
+  <rdfs:label>physiological organ</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#organ_of_organ_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="organ_of_organ_system">
+  <rdfs:label>organ of organ system</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_structure_【anatomical_structure】" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_structure">
+  <rdfs:label>human structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_body_part__form_CONAND" />
+  <rdfs:comment>
+2012.11.01
+旧名称器官．組織，細胞も含んでいるため，人体構造物と改称．
+人体構造物【解剖構造物】と人体汎用的構造物を下位とした．  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ureter_system">
+  <rdfs:label>ureter system</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#urinary_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="urinary_system">
+  <rdfs:label>urinary system</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#physiological_organ" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="hydrostatic_function">
+  <rdfs:label>hydrostatic function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#physical_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="structure_function">
+  <rdfs:label>structure function</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#hydrostatic_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="valvular_structure">
+  <rdfs:label>valvular structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_hollow_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="porous_structure">
+  <rdfs:label>porous structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#human_hollow_structure" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="delivery_quantity_regulatory_mechanism">
+  <rdfs:label>delivery quantity regulatory mechanism</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#structure_function" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="bladder">
+  <rdfs:label>bladder</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#urinary_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="hollow_structure">
+  <rdfs:label>hollow structure</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#morphological_whole" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="morphological_whole">
+  <rdfs:label>morphological whole</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#object" />
+  <rdfs:comment>
+It looses its identity when its shape(morpheme) is damaged.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="object">
+  <rdfs:label>object</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#unitary" />
+  <rdfs:comment>
+It is unitary and non-dissective, that is, it exists as a whole.  It needs substance to constitute itself. It needs an event in which it participates to exist in the real world.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="unitary">
+  <rdfs:label>unitary</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#continuant" />
+  <rdfs:comment>
+All parts are identifiable.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="continuant">
+  <rdfs:label>continuant</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#entity" />
+  <rdfs:comment>
+Anything which persists and can change. in the 3D space.  It enacts processes, thereby it exists in the real world.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="entity">
+  <rdfs:label>entity</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#YAMATO" />
+  <rdfs:comment>
+something which exists independently of others.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="functional">
+  <rdfs:label>functional</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#object" />
+  <rdfs:comment>
+It looses its identity when its function is damaged.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="living_organism">
+  <rdfs:label>living organism</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#functional" />
+  <rdfs:comment>
+Its function is to do life activity.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="body_part">
+  <rdfs:label>body part</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#living_organism" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="human_body">
+  <rdfs:label>human body</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#living_organism" />
+  <rdfs:comment>
+to avoid redundancy, each body part should be defined in the corresponding slots of human body rather than in body part.  Is-a relations between each part of a body(head, eye, arm, etc.) and &quot;body part&quot; are automatically generated by Hozo as well as those between each part and its whole. For example of the latter kinds, head[RH] is-a head portion[RH], head-portion[RH] is-a human body, arm[RH] is-a human body, etc. are generated. these is-a relations are accessible when you use &quot;p-&quot; operator like &quot;p-human body&quot; in a class constraint.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="dependent_entity">
+  <rdfs:label>dependent entity</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#YAMATO" />
+  <rdfs:comment>
+Entity which needs another entity to exist.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="specifically_dependent">
+  <rdfs:label>specifically dependent</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#dependent_entity" />
+  <rdfs:comment>
+It needs a particular individual to exist.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="role">
+  <rdfs:label>role</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#specifically_dependent" />
+  <rdfs:comment>
+Roles are not adequately reflected in YAMAtO, since it is already reflected/imbedded in Hozo tool. While ordinary types such as human, table, etc. are defined independently, roles are defined within a context which they necessarily depends on in our role theory [Mizoguchi 07]. In fact, roles are used in defining all the types in YAMAtO. these are the reasons why YAMAtO does not have to incorporate roles in it. When one uses Hozo with YAMAtO, he/she can enjoy maximally the benefits presented by both.  see  [Mizoguchi 2007] Mizoguchi R., sunagawa E., Kozaki K. and Kitamura Y.: A Model of Roles within an Ontology Development tool: Hozo, J. of Applied Ontology, Vol.2, No.2, pp.159-179. sep. 2007.  </rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:ID="kidney">
+  <rdfs:label>kidney</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#urinary_system" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="equal">
+  <rdfs:label>equal</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#RelationalConcept" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="sameAs">
+  <rdfs:label>sameAs</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#RelationalConcept" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="larger-than">
+  <rdfs:label>larger-than</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#RelationalConcept" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="not-equal">
+  <rdfs:label>not-equal</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#RelationalConcept" />
+</rdfs:Class>
+<rdfs:Class rdf:ID="different">
+  <rdfs:label>different</rdfs:label>
+  <rdfs:subClassOf rdf:resource="#RelationalConcept" />
+</rdfs:Class>
+<rdf:Property rdf:about="hasPart">
+  <rdfs:label>hasPart</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="hasAttribute">
+  <rdfs:label>hasAttribute</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="has_part">
+  <rdfs:label>has_part</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+  <rdfs:range rdf:resource="#human_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_object-dependent_abnormal_state">
+  <rdfs:label>has_object-dependent abnormal state</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+  <rdfs:range rdf:resource="#human_structure"/>
+  <rdfs:range rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_object-dependent_bodily_motion">
+  <rdfs:label>has_object-dependent bodily motion</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_function">
+  <rdfs:label>has_function</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#functional"/>
+  <rdfs:range rdf:resource="#function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_connection">
+  <rdfs:label>has_connection</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+  <rdfs:range rdf:resource="#human_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_connection_port">
+  <rdfs:label>has_connection port</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_form">
+  <rdfs:label>has_form</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_state">
+  <rdfs:label>has_state</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_area">
+  <rdfs:label>has_area</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#human_body_part__form_CONAND"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_structure_function">
+  <rdfs:label>has_structure function</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:subPropertyOf rdf:resource="has_function"/>
+  <rdfs:domain rdf:resource="#human_general_structure"/>
+  <rdfs:range rdf:resource="#structure_function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_part_of_structure">
+  <rdfs:label>has_part of structure</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_general_structure"/>
+  <rdfs:range rdf:resource="#human_general_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_role">
+  <rdfs:label>has_role</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_general_structure"/>
+  <rdfs:domain rdf:resource="#hollow_structure"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_another_name">
+  <rdfs:label>has_another name</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_hollow_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_hollow">
+  <rdfs:label>has_hollow</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_hollow_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_hollow_volume">
+  <rdfs:label>has_hollow volume</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_hollow_sectional_area">
+  <rdfs:label>has_hollow sectional area</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Derived_germ">
+  <rdfs:label>has_Derived germ</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#connective_tissue_cells"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_differentiated_cell">
+  <rdfs:label>has_differentiated cell</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#connective_tissue_cells"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_structure_on_the_cell_membrane">
+  <rdfs:label>has_structure on the cell membrane</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#smooth_muscle_cell"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_chemical_mediator_receptor">
+  <rdfs:label>has_chemical mediator receptor</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_intracellular_structure">
+  <rdfs:label>has_intracellular structure</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#smooth_muscle_cell"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_wall_of_wall_structure">
+  <rdfs:label>has_wall of wall structure</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_volume">
+  <rdfs:label>has_volume</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_lumen">
+  <rdfs:label>has_lumen</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_orifice">
+  <rdfs:label>has_orifice</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_structural_function">
+  <rdfs:label>has_structural function</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="has_structure_function"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#holding_Function"/>
+  <rdfs:range rdf:resource="#passing_function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_access_point">
+  <rdfs:label>has_access point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#passing_function"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Attribute_of_input-output">
+  <rdfs:label>has_Attribute of input-output</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_wall_structuremaking_up_tubular_structure_">
+  <rdfs:label>has_wall structuremaking up ｔubular structure </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_thickness">
+  <rdfs:label>has_thickness</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_quality_value">
+  <rdfs:label>has_quality value</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_contents">
+  <rdfs:label>has_contents</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#p-tube_wall_RH_"/>
+  <rdfs:range rdf:resource="#p-tubular_structure"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_result">
+  <rdfs:label>has_result</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_generic_quality">
+  <rdfs:label>has_generic quality</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_tube_lumen">
+  <rdfs:label>has_tube lumen</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_tube_section_area">
+  <rdfs:label>has_tube section area</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_passing_function_in_the_tube">
+  <rdfs:label>has_passing function in the tube</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#passing_function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_pressure_from_outside（increased_pressure）">
+  <rdfs:label>has_pressure from outside（increased pressure）</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_outside_a_tube">
+  <rdfs:label>has_outside a tube</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_generic_quality_of_number_of_substance_">
+  <rdfs:label>has_generic quality of number of substance </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_subcontents">
+  <rdfs:label>has_subcontents</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:range rdf:resource="#passing_function"/>
+  <rdfs:range rdf:resource="#p-tube_wall_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_cause">
+  <rdfs:label>has_cause</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_tube_contriction_motion">
+  <rdfs:label>has_tube contriction motion</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_supply_quantity">
+  <rdfs:label>has_supply quantity</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_lumen_diameter_of_a_tube">
+  <rdfs:label>has_lumen diameter of a tube</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_">
+  <rdfs:label>has_</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_leak">
+  <rdfs:label>has_leak</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:range rdf:resource="#p-contents_in_a_tube_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_leak_point">
+  <rdfs:label>has_leak point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#p-contents_in_a_tube_RH_"/>
+  <rdfs:range rdf:resource="#p-tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_lumen_sectional_area">
+  <rdfs:label>has_lumen sectional area</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_object">
+  <rdfs:label>has_object</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#passing_function"/>
+  <rdfs:range rdf:resource="#object"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_passing_volume">
+  <rdfs:label>has_passing volume</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#passing_function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_passing_point">
+  <rdfs:label>has_passing point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#passing_function"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_structure_function_">
+  <rdfs:label>has_structure function </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="has_structure_function"/>
+  <rdfs:subPropertyOf rdf:resource="has_function"/>
+  <rdfs:domain rdf:resource="#tubular_structure_with_extensibility"/>
+  <rdfs:range rdf:resource="#passing_function"/>
+  <rdfs:range rdf:resource="#holding_Function"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter【left_and_right_abstraction】">
+  <rdfs:label>has_ureter【ｌeft and right abstraction】</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_structure">
+  <rdfs:label>has_ureter structure</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_wall">
+  <rdfs:label>has_ureter wall</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_adventitia_of_ureter">
+  <rdfs:label>has_adventitia of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_mucosa">
+  <rdfs:label>has_ureter mucosa</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_mucosal_epithelia">
+  <rdfs:label>has_ureter mucosal epithelia</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_mucosa_endothelial_cell">
+  <rdfs:label>has_ureter mucosa endothelial celｌ</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_proper_lamina">
+  <rdfs:label>has_ureter proper lamina</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_submucosal_tissue">
+  <rdfs:label>has_ureter submucosal tissue</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_uretermuscle_layer">
+  <rdfs:label>has_uretermuscle layer</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_vertical_muscle_layer_of_ureter">
+  <rdfs:label>has_internal vertical muscle layer of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_outer_ring__muscle_layer_of_ureter">
+  <rdfs:label>has_outer ring  muscle layer of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_external_vertical_muscle_layer_of_ureter">
+  <rdfs:label>has_external vertical muscle layer of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_space">
+  <rdfs:label>has_ureter space</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_abdominal_portion_of_ureter【left_and_right_abstraction】">
+  <rdfs:label>has_abdominal portion of ureter【ｌeft and right abstraction】</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_abdominal_portion_of_ureter">
+  <rdfs:label>has_stenosis area of abdominal portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#r-abdominal_portion_of_ureter【left_and_right_abstraction】_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【abstraction】connection">
+  <rdfs:label>has_【abstraction】connection</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#r-abdominal_portion_of_ureter【left_and_right_abstraction】_RH_"/>
+  <rdfs:range rdf:resource="#r-internal_wall_of_ureter_left_and_right_abstraction】_RH_"/>
+  <rdfs:range rdf:resource="#r-internal_wall_of_ureter_【left_and_right_abstraction】_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【abstraction】connection_port">
+  <rdfs:label>has_【abstraction】connection port</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#r-abdominal_portion_of_ureter【left_and_right_abstraction】_RH_"/>
+  <rdfs:domain rdf:resource="#r-internal_wall_of_ureter_left_and_right_abstraction】_RH_"/>
+  <rdfs:domain rdf:resource="#r-internal_wall_of_ureter_【left_and_right_abstraction】_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【abstraction】access_point">
+  <rdfs:label>has_【abstraction】access point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_pelvic_portion_of_ureter【left_and_right_abstraction】">
+  <rdfs:label>has_pelvic portion of ureter【ｌeft and right abstraction】</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_stenosis_area_of_pelvic_portion_of_ureter">
+  <rdfs:label>has_stenosis area of stenosis area of pelvic portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#r-pelvic_portion_of_ureter【left_and_right_abstraction】_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_wall_of_ureter_【left_and_right_abstraction】">
+  <rdfs:label>has_internal wall of ureter 【ｌeft and right abstraction】</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_internal_wall_of_ureter">
+  <rdfs:label>has_stenosis area of internal wall of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#r-internal_wall_of_ureter_【left_and_right_abstraction】_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_ureter">
+  <rdfs:label>has_left ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#ureter"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_and_reight">
+  <rdfs:label>has_left and reight</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:domain rdf:resource="#r-left_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-left_pelvic_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-left_internal_wall_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_pelvic_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_internal_wall_of_ureter"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_abdominal_portion_of_ureter">
+  <rdfs:label>has_left abdominal portion of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_and_right">
+  <rdfs:label>has_left and right</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_left_abdominal_portion_of_ureter">
+  <rdfs:label>has_stenosis area of left abdominal portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+  <rdfs:range rdf:resource="#r-left_abdominal_portion_of_ureter_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【concrete】connection">
+  <rdfs:label>has_【concrete】connection</rdfs:label>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:domain rdf:resource="#gate-type_structure"/>
+  <rdfs:range rdf:resource="#r-left_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:range rdf:resource="#r-left_internal_wall_of_ureter_RH_"/>
+  <rdfs:range rdf:resource="#r-right_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:range rdf:resource="#r-right_internal_wall_of_ureter"/>
+  <rdfs:range rdf:resource="#r-right_internal_wall_of_ureter"/>
+  <rdfs:range rdf:resource="#r-membranous_part_of_urethra_RH_"/>
+  <rdfs:range rdf:resource="#r-external_urethral_orifice_of_urethra_RH_"/>
+  <rdfs:range rdf:resource="#r-internal_urinary_meatus_of_urethral_wall__RH_"/>
+  <rdfs:range rdf:resource="#r-internal_urinary_meatus_of_urethral_wall__RH_"/>
+  <rdfs:range rdf:resource="#r-left_urethral_openings_RH_"/>
+  <rdfs:range rdf:resource="#r-right_urethral_openings_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【concrete】connection_port">
+  <rdfs:label>has_【concrete】connection port</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#r-left_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-left_internal_wall_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_abdominal_portion_of_ureter_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_internal_wall_of_ureter"/>
+  <rdfs:domain rdf:resource="#r-right_internal_wall_of_ureter"/>
+  <rdfs:domain rdf:resource="#r-membranous_part_of_urethra_RH_"/>
+  <rdfs:domain rdf:resource="#r-external_urethral_orifice_of_urethra_RH_"/>
+  <rdfs:domain rdf:resource="#r-internal_urinary_meatus_of_urethral_wall__RH_"/>
+  <rdfs:domain rdf:resource="#r-internal_urinary_meatus_of_urethral_wall__RH_"/>
+  <rdfs:domain rdf:resource="#r-left_urethral_openings_RH_"/>
+  <rdfs:domain rdf:resource="#r-right_urethral_openings_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【concrete】access_point">
+  <rdfs:label>has_【concrete】access point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_pelvic_portion_of_ureter">
+  <rdfs:label>has_left pelvic portion of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_left_pelvic_portion_of_ureter">
+  <rdfs:label>has_stenosis area of left pelvic portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+  <rdfs:range rdf:resource="#r-left_pelvic_portion_of_ureter_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_internal_wall_of_ureter">
+  <rdfs:label>has_left internal wall of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_left_internal_wall_of_ureter">
+  <rdfs:label>has_stenosis area of left internal wall of ureter</rdfs:label>
+  <rdfs:range rdf:resource="#r-left_internal_wall_of_ureter_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_right_ureter">
+  <rdfs:label>has_right ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#ureter"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_right_abdominal_portion_of_ureter">
+  <rdfs:label>has_right abdominal portion of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_right_abdominal_portion_of_ureter">
+  <rdfs:label>has_stenosis area of right abdominal portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+  <rdfs:range rdf:resource="#r-right_abdominal_portion_of_ureter_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_right_pelvic_portion_of_ureter">
+  <rdfs:label>has_right pelvic portion of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_right_pelvic_portion_of_ureter">
+  <rdfs:label>has_stenosis area of right pelvic portion of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+  <rdfs:range rdf:resource="#r-right_pelvic_portion_of_ureter_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_right_internal_wall_of_ureter">
+  <rdfs:label>has_right internal wall of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:range rdf:resource="#ureter_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_stenosis_area_of_right_internal_wall_of_ureter">
+  <rdfs:label>has_stenosis area of right internal wall of ureter</rdfs:label>
+  <rdfs:domain rdf:resource="#ureter_structure"/>
+  <rdfs:range rdf:resource="#r-right_internal_wall_of_ureter"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_structure_of_urethra">
+  <rdfs:label>has_structure of urethra</rdfs:label>
+  <rdfs:domain rdf:resource="#urethra"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_wall">
+  <rdfs:label>has_urethral wall</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_mucosa">
+  <rdfs:label>has_urethral mucosa</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_mucosal_epithelium">
+  <rdfs:label>has_urethral mucosal epithelium</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_mucosal_endothelial_cell">
+  <rdfs:label>has_urethral mucosal endothelial celｌ</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_proper_lamina_of_urethra">
+  <rdfs:label>has_proper lamina of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_woman_s_urethra_dellen_">
+  <rdfs:label>has_woman's urethra dellen </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_gland">
+  <rdfs:label>has_urethral gland</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Urethral_glands_of_female">
+  <rdfs:label>has_Urethral glands of female</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_feature">
+  <rdfs:label>has_feature</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_conduit_of_woman_s_paraurethral_duct">
+  <rdfs:label>has_conduit of woman's paraurethral duct</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosal_ruga_making_up_an_extension_of_the_uvula_of_bladder_in_the_posterior_wall_of_urethra">
+  <rdfs:label>has_mucosal ruga making up an extension of the uvula of bladder in the posterior wall of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_submucosal_tissuestenosis_area_of_urethra">
+  <rdfs:label>has_submucosal tissuestenosis area of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_sponge_layer_of_urethra">
+  <rdfs:label>has_sponge layer of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_muscle_layer_of_urethra">
+  <rdfs:label>has_muscle layer of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_vertical_mucosal_layer_of_urethra">
+  <rdfs:label>has_vertical mucosal layer of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urethral_circular_muscle_layer">
+  <rdfs:label>has_urethral circular muscle layer</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_cavity_of_urethra">
+  <rdfs:label>has_cavity of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_membranous_part_of_urethra">
+  <rdfs:label>has_membranous part of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#urethra"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_wall_of_membranous_part_of_urethra">
+  <rdfs:label>has_wall of membranous part of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucousa_of_membranous_part_of_urethra">
+  <rdfs:label>has_mucousa of membranous part of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosal_epithelia_of_membranous_part_of_urethra">
+  <rdfs:label>has_mucosal epithelia of membranous part of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosal_endothelial_cell_of_membranous_part_of_urethra">
+  <rdfs:label>has_mucosaｌ endothelial celｌ of membranous part of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_external_urethral_sphincter">
+  <rdfs:label>has_external urethral sphincter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_component">
+  <rdfs:label>has_component</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+  <rdfs:range rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_external_urethral_orifice">
+  <rdfs:label>has_external urethral orifice</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#urethra"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_urinary_meatus_of_urethra">
+  <rdfs:label>has_internal urinary meatus of urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#urethra"/>
+  <rdfs:range rdf:resource="#porous_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【concrete】Access_point">
+  <rdfs:label>has_【concrete】Access point</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#porous_structure"/>
+  <rdfs:domain rdf:resource="#r-internal_urinary_meatus_of_urethra_RH_"/>
+  <rdfs:range rdf:resource="#r-Internal_urinary_meatus_of_urethra_RH_"/>
+  <rdfs:range rdf:resource="#r-internal_urinary_meatus_of_urethra_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_【contrete】connection_port">
+  <rdfs:label>has_【contrete】connection port</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#r-Internal_urinary_meatus_of_urethra_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_urinary_meatus_of_urethral_wall_">
+  <rdfs:label>has_internal urinary meatus of urethral wall </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#urethra"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_urethral_wall_">
+  <rdfs:label>has_internal urethral wall </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosal_epithelia_of_internal_urethral_wall_">
+  <rdfs:label>has_mucosal epithelia of internal urethral wall </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_urethral_wall_of_mucosal_endothelial_cell">
+  <rdfs:label>has_internal urethral wall of mucosal endothelial celｌ</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_urinary_sphincter_inside_urethra">
+  <rdfs:label>has_urinary sphincter inside urethra</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_ureter_system_structure">
+  <rdfs:label>has_ureter system structure</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#ureter_system"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_wall_of_ureter_system">
+  <rdfs:label>has_wall of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosa_of_ureter_system">
+  <rdfs:label>has_mucosa of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosa_endothelial_of_ureter_system">
+  <rdfs:label>has_mucosa endothelial of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosa_endothelial_cell_of_ureter_system">
+  <rdfs:label>has_mucosa endothelial celｌ of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_submucosal_tissue_of_ureter_system">
+  <rdfs:label>has_submucosal tissue of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_muscle_layer_of_ureter_system">
+  <rdfs:label>has_muscle layer of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_space_of_ureter_system">
+  <rdfs:label>has_space of ureter system</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_posterior_portion_of_bladder">
+  <rdfs:label>has_posterior portion of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder_trigone">
+  <rdfs:label>has_bladder trigone</rdfs:label>
+  <rdfs:domain rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_vertical_muscle_layer_of_bladder_trigone">
+  <rdfs:label>has_vertical muscle layer of bladder trigone</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_continuous_portion_of_internal_vertical_muscle_layer_of_ureter">
+  <rdfs:label>has_continuous portion of internal vertical muscle layer of ureter</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_continuous_portion_of_ureter_external_vertical_muscle_layer">
+  <rdfs:label>has_continuous portion of ureter external vertical muscle layer</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_uvula_of_bladder_">
+  <rdfs:label>has_uvula of bladder </rdfs:label>
+  <rdfs:range rdf:resource="#r-trigone_of_urinary_bladder_RH_"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_left_urethral_openings">
+  <rdfs:label>has_left urethral openings</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_right_urethral_openings">
+  <rdfs:label>has_right urethral openings</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_cervix_of_bladder">
+  <rdfs:label>has_ｃervix of bladder</rdfs:label>
+  <rdfs:domain rdf:resource="#Blank"/>
+  <rdfs:range rdf:resource="#gate-type_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Muscle_layer_above_cervix_of_bladder">
+  <rdfs:label>has_Muscle layer above cervix of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#gate-type_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_front_end_portion_of_bladder">
+  <rdfs:label>has_front end portion of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_contact_structures">
+  <rdfs:label>has_contact structures</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_middle_part_of_apex_of_bladder_and_base_of_bladder">
+  <rdfs:label>has_middle part of apex of bladder and base of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#bladder"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Bladder【common_structure】_">
+  <rdfs:label>has_Bladder【common structure】 </rdfs:label>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_Bladder wall">
+  <rdfs:label>has_Bladder wall</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_adventitia_of_bladder">
+  <rdfs:label>has_adventitia of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosa_of_bladder">
+  <rdfs:label>has_mucosa of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder_mucosal_epithelia">
+  <rdfs:label>has_bladder mucosal epithelia</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mucosa_of_bladder_endothelial_cell">
+  <rdfs:label>has_mucosa of bladder endothelial celｌ</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_lamina_propria_of_bladder_">
+  <rdfs:label>has_lamina propria of bladder </rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_submucosal_tissue">
+  <rdfs:label>has_submucosal tissue</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder_muscle_layer">
+  <rdfs:label>has_bladder muscle layer</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_internal_vertical_muscle_layer_of_bladder">
+  <rdfs:label>has_internal vertical muscle layer of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_circular_muscle_layer_of_bladder">
+  <rdfs:label>has_circular muscle layer of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_external_vertical_muscle_layer_of_bladder">
+  <rdfs:label>has_external vertical muscle layer of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_cavity_of_bladder">
+  <rdfs:label>has_cavity of bladder</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#Blank"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder【part_of_tubular_structure】">
+  <rdfs:label>has_bladder【part of tubular structure】</rdfs:label>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#tubular_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder【part_of_tubular_structure_with_extensibility】">
+  <rdfs:label>has_bladder【part of tubular structure with extensibility】</rdfs:label>
+  <rdfs:domain rdf:resource="#bladder"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder【part_of_sac-like_structure】">
+  <rdfs:label>has_bladder【part of sac-like structure】</rdfs:label>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#sac-like_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_bladder【part_of_gate-type_structure】">
+  <rdfs:label>has_bladder【part of gate-type structure】</rdfs:label>
+  <rdfs:domain rdf:resource="#bladder"/>
+  <rdfs:range rdf:resource="#gate-type_structure"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_surrounding">
+  <rdfs:label>has_surrounding</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#hollow_structure"/>
+  <rdfs:range rdf:resource="#continuant"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_material">
+  <rdfs:label>has_material</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#object"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_n_or_a">
+  <rdfs:label>has_n or a</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#functional"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_truth_value">
+  <rdfs:label>has_truth value</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_trunk">
+  <rdfs:label>has_trunk</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_head_part">
+  <rdfs:label>has_head part</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_head">
+  <rdfs:label>has_head</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#body_part"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_brain">
+  <rdfs:label>has_brain</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#body_part"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_eye">
+  <rdfs:label>has_eye</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#body_part"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_mouth">
+  <rdfs:label>has_mouth</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#body_part"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_arm">
+  <rdfs:label>has_arm</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_hand">
+  <rdfs:label>has_hand</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_leg">
+  <rdfs:label>has_leg</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_foot">
+  <rdfs:label>has_foot</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasPart"/>
+  <rdfs:domain rdf:resource="#human_body"/>
+  <rdfs:range rdf:resource="#body_part"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_on_what">
+  <rdfs:label>has_on what</rdfs:label>
+  <rdfs:subPropertyOf rdf:resource="hasAttribute"/>
+  <rdfs:domain rdf:resource="#dependent_entity"/>
+  <rdfs:range rdf:resource="#entity"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_value">
+  <rdfs:label>has_value</rdfs:label>
+  <rdfs:domain rdf:resource="#equal"/>
+  <rdfs:domain rdf:resource="#not-equal"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_class">
+  <rdfs:label>has_class</rdfs:label>
+  <rdfs:domain rdf:resource="#sameAs"/>
+  <rdfs:domain rdf:resource="#different"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_larger">
+  <rdfs:label>has_larger</rdfs:label>
+  <rdfs:domain rdf:resource="#larger-than"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+<rdf:Property rdf:about="has_smaller">
+  <rdfs:label>has_smaller</rdfs:label>
+  <rdfs:domain rdf:resource="#larger-than"/>
+  <rdfs:range rdf:resource="#Any"/>
+</rdf:Property>
+</rdf:RDF>
+

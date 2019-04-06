@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns="http://www.hozo.jp/owl/PharmacologyAndMechaninsOfActionOntology_20190314_2.owl"
+        xml:base="http://www.hozo.jp/owl/PharmacologyAndMechaninsOfActionOntology_20190314_2.owl">
+
+<owl:Ontology rdf:about="">
+    <rdfs:comment>
+        HOZO:OWL Export(build-20120726)
+    </rdfs:comment>
+</owl:Ontology>
+
+<owl:Class rdf:ID="RelationalConcept">
+    <rdfs:label>RelationalConcept</rdfs:label>
+</owl:Class>
+<owl:ObjectProperty rdf:ID="hasPart">
+    <rdfs:label>hasPart</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasAttribute">
+    <rdfs:label>hasAttribute</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="depends_on">
+    <rdfs:label>depends_on</rdfs:label>
+</owl:ObjectProperty>
+<owl:Class rdf:ID="Any">
+    <rdfs:label>Any</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="Drug_molecule_-_target_interaction_3">
+    <rdfs:label>Drug_molecule_-_target_interaction_3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_target_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_target_process" />
+            <owl:allValuesFrom rdf:resource="#p-Drug_molecule_-_target_interaction_3" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_physiological_result" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_result" />
+            <owl:allValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process_2">
+    <rdfs:label>Signal_transduction_process_2</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process" />
+            <owl:allValuesFrom rdf:resource="#Blank" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes" />
+            <owl:allValuesFrom rdf:resource="#Blank" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_" />
+            <owl:allValuesFrom rdf:resource="#Blank" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="drug">
+    <rdfs:label>drug</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_product_attributes" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_product_attributes" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_component_molecules" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Medicinal_action">
+    <rdfs:label>Medicinal_action</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_action_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_unit" />
+            <owl:allValuesFrom rdf:resource="#Blank" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="physiological_chain">
+    <rdfs:label>physiological_chain</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit" />
+            <owl:allValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="physiological_state">
+    <rdfs:label>physiological_state</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            <owl:onProperty rdf:resource="#has_object_target_structure_" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:ObjectProperty rdf:ID="has_target_process">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Drug_molecule_-_target_interaction_3" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_resultant_effect">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Drug_molecule_-_target_interaction_3" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_result">
+    <rdfs:subPropertyOf rdf:resource="#hasAttribute" />
+    <rdfs:domain rdf:resource="#Drug_molecule_-_target_interaction_3" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Signal_transduction_process_2" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Signal_transduction_process_2" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Signal_transduction_process_2" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_product_attributes">
+    <rdfs:subPropertyOf rdf:resource="#hasAttribute" />
+    <rdfs:domain rdf:resource="#drug" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_component_molecules">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#drug" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_action_unit">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#Medicinal_action" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_state_unit">
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+    <rdfs:domain rdf:resource="#physiological_chain" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_object_target_structure_">
+    <rdfs:subPropertyOf rdf:resource="#hasAttribute" />
+    <rdfs:domain rdf:resource="#physiological_state" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_featured_object">
+    <rdfs:subPropertyOf rdf:resource="#hasAttribute" />
+    <rdfs:domain rdf:resource="#physiological_state" />
+</owl:ObjectProperty>
+
+<owl:Class rdf:ID="UndefinedClass">
+    <rdfs:label>UndefinedClass</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="p-Drug_molecule_-_target_interaction_3">
+    <rdfs:label>p-Drug_molecule_-_target_interaction_3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#UndefinedClass" />
+</owl:Class>
+<owl:Class rdf:ID="Blank">
+    <rdfs:label>Blank</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#UndefinedClass" />
+</owl:Class>
+
+
+</rdf:RDF>
+
