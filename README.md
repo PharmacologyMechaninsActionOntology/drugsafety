@@ -10,6 +10,7 @@
 	http://hozoviewer.ei.sanken.osaka-u.ac.jp/HozoWebXML/
 
 
+
 File list:
 
 1. An ontological framework for “Pharmacology and Mechanism of Action Pharmacodynamics Ontology”
@@ -22,6 +23,7 @@ File list:
 * OWL format
 
 *RDF and OWL files were produced from the original HOZO XML format files by using the export function in HOZO-Ontology Editor.
+
 
 References:
 
@@ -37,4 +39,3 @@ http://ceur-ws.org/Vol-2050/FOUST_paper_4.pdf. Accessed 8 Dec 2018
 8. Mizoguchi R, Sunagawa E, Kozaki K, Kitamura Y. The model of roles within an ontology development tool: Hozo. Appl Ontol. 2007;2(2):159–79. https://content.iospress.com/articles/applied-ontology/ao038. Accessed 8 Dec 2018
 9. Kozaki K, Sunagawa E, Kitamura Y, Mizoguchi R. Role Representation Model Using OWL and SWRL. Proc. of 2nd Workshop on Roles and Relationships in Object Oriented Programming, Multiagent Systems, and Ontologies, Berlin,July 30-31, pp.39-46, 2007. http://www.ei.sanken.osaka-u.ac.jp/pub/kozaki/Role07kozaki.pdf. Accessed 8 Dec 2018
 10. Imai T, Hayakawa M, Ohe K. Development of Description Framework of Pharmacodynamics Ontology and its Application to Possible Drug-drug Interaction Reasoning. Stud Heal Technol Inf. 2013;192:567–71.
-
