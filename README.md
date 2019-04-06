@@ -7,7 +7,7 @@
 	http://download.hozo.jp/onto_library/upperOnto.htm
  HOZO is also available at the following web site. 
 	http://www.hozo.jp/
-	http://hozoviewer.ei.sanken.osaka-u.ac.jp/HozoWebXML/
+	
 
 
 
