@@ -12,16 +12,16 @@
 File list:
 
 1. An ontological framework for “Pharmacology and Mechanism of Action Pharmacodynamics Ontology”
--XML format (by HOZO)
--RDF format
--OWL (simple) format
--OWL (detailed) format
+* XML format (by HOZO)
+* RDF format
+* OWL (simple) format
+* OWL (detailed) format
 
 2. A part of the “Expanded Anatomical Ontology” related to dysuria
--XML format (by HOZO)
--RDF format
--OWL (simple) format
--OWL (detailed) format
+* XML format (by HOZO)
+* RDF format
+* OWL (simple) format
+* OWL (detailed) format
 
 *RDF and OWL files were produced from the original HOZO XML format files by using the export function in HOZO-Ontology Editor. Please note that RDF and OWL (simple) format represent only main concepts (classes) and relationships in original Hozo format because some differences of ontology representation model. OWL (detailed) format represents all information in Hozo format based-on the role representation model [8] while some model is improved using OWL2 from previous one [9]. 
 
