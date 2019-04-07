@@ -34,6 +34,7 @@ representation model [8] while some model is improved using OWL2 from
 previous one [9]. 
 
 
+
 References:
 
 1. Imai T, Kou H, Zhou J, Kozaki K, Mizoguchi R, Ohe K. Japan Medical Ontology Development Project for Advanced Clinical. Syst Proc 10th Int HL7 Interoperability Conf 2009. 2009;42–6.
