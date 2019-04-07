@@ -1,0 +1,3295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns="http://www.hozo.jp/owl/PharmacologyAndMechaninsOfActionOntology_HOZO_20190405.owl#"
+        xml:base="http://www.hozo.jp/owl/PharmacologyAndMechaninsOfActionOntology_HOZO_20190405.owl#">
+
+<owl:Ontology rdf:about="">
+    <rdfs:comment>
+        HOZO:OWL Export(build-2013/12/23)
+        -Model II-
+    </rdfs:comment>
+</owl:Ontology>
+
+<owl:Class rdf:ID="ESSENTIAL-CONCEPT">
+    <rdfs:label>ESSENTIAL-CONCEPT</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="CONTEXT">
+    <rdfs:label>CONTEXT</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="RelationalConcept">
+    <rdfs:label>RelationalConcept</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="ROLE-CONCEPT">
+    <rdfs:label>ROLE-CONCEPT</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="ROLE-HOLDER">
+    <rdfs:label>ROLE-HOLDER</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="NotDefinedClass">
+    <rdfs:label>NotDefinedClass</rdfs:label>
+</owl:Class>
+<owl:Class rdf:ID="Any">
+    <rdfs:label>Any</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ESSENTIAL-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#way_of_action_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#chemical_mediator_outside_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#result_of_response.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#product_attributes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#general_name_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#generic_quality_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Drug_molecule_-_target_interaction_3">
+    <rdfs:label>Drug_molecule_-_target_interaction_3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#physiological_response_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_target_process" />
+            <owl:allValuesFrom rdf:resource="#action_type_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_target_process" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_resultant_effect_Role" />
+            <owl:allValuesFrom rdf:resource="#resultant_effect_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_resultant_effect" />
+            <owl:allValuesFrom rdf:resource="#resultant_effect" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_result" />
+            <owl:allValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_result" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="resultant_effect_Role">
+    <rdfs:label>resultant_effect_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Drug_molecule_-_target_interaction_3" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#resultant_effect" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_way_of_action_Role" />
+            <owl:allValuesFrom rdf:resource="#way_of_action_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_way_of_action" />
+            <owl:allValuesFrom rdf:resource="#way_of_action" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="resultant_effect">
+    <rdfs:label>resultant_effect</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="way_of_action_Role">
+    <rdfs:label>way_of_action_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#resultant_effect_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#way_of_action" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_type" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="way_of_action">
+    <rdfs:label>way_of_action</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#way_of_action_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process_2">
+    <rdfs:label>Signal_transduction_process_2</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes_Role" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender__Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process_Role">
+    <rdfs:label>Signal_transduction_process_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_2" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_producing_cell" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_producing_cell" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_produced_compound" />
+            <owl:allValuesFrom rdf:resource="#produced_compound" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_main_chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#main_chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_produced_compound" />
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_main_chemical_mediator" />
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_Role_reuptake" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role_reuptake" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_reuptake" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_reuptake" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_Role_metabolism" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role_metabolism" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_metabolism" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_Role_secretion" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role_secretion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_secretion" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process">
+    <rdfs:label>Signal_transduction_process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Blank"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="produced_compound">
+    <rdfs:label>produced_compound</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#main_chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="main_chemical_mediator">
+    <rdfs:label>main_chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_Role">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process.precursor" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process.precursor" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process.precursor" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_uptake_organ" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process.precursor.★uptake_method取り込み方法" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process.precursor">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process.precursor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_synthesis">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_synthesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.acting_enzyme" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.produced_chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process.precursor"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.acting_enzyme" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.produced_chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound">
+    <rdfs:label>Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_Role">
+    <rdfs:label>Signal_transduction_process.sub-process_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process">
+    <rdfs:label>Signal_transduction_process.sub-process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process.chemical_mediator_Role">
+    <rdfs:label>Signal_transduction_process.sub-process.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process.chemical_mediator.★uptake_method取り込み方法" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process.chemical_mediator">
+    <rdfs:label>Signal_transduction_process.sub-process.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#main_chemical_mediator"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_Role_reuptake">
+    <rdfs:label>Signal_transduction_process.sub-process_Role_reuptake</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_reuptake" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_reuptake.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#main_chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_reuptake">
+    <rdfs:label>Signal_transduction_process.sub-process_reuptake</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_Role_metabolism">
+    <rdfs:label>Signal_transduction_process.sub-process_Role_metabolism</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_metabolism">
+    <rdfs:label>Signal_transduction_process.sub-process_metabolism</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role">
+    <rdfs:label>Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role_metabolism" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.acting_enzyme" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.produced_chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_metabolism.chemical_mediator">
+    <rdfs:label>Signal_transduction_process.sub-process_metabolism.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#main_chemical_mediator"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_Role_secretion">
+    <rdfs:label>Signal_transduction_process.sub-process_Role_secretion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_secretion.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Signal_transduction_process.sub-process_secretion.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_secretion">
+    <rdfs:label>Signal_transduction_process.sub-process_secretion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_secretion.chemical_mediator_Role">
+    <rdfs:label>Signal_transduction_process.sub-process_secretion.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_Role_secretion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_★part_of_signal_transduction_process_to_stimulate_secretion" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Signal_transduction_process.sub-process_secretion.chemical_mediator">
+    <rdfs:label>Signal_transduction_process.sub-process_secretion.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#main_chemical_mediator"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#Signal_transduction_process.sub-process_secretion.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes_Role">
+    <rdfs:label>extracellular_sub-processes_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_2" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_released_chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#released_chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_main_chemical_mediator_1_" />
+            <owl:allValuesFrom rdf:resource="#main_chemical_mediator_1_" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_released_chemical_mediator" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_main_chemical_mediator_1_" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_acting_compound" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process_Role" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes">
+    <rdfs:label>extracellular_sub-processes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Blank_a"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#extracellular_sub-processes_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="released_chemical_mediator">
+    <rdfs:label>released_chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#main_chemical_mediator_1_" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="main_chemical_mediator_1_">
+    <rdfs:label>main_chemical_mediator_1_</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process_Role">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_passing_organ" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#main_chemical_mediator"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_chemical_mediatorcafter_structural_conversion_Role" />
+            <owl:allValuesFrom rdf:resource="#chemical_mediatorcafter_structural_conversion_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_chemical_mediatorcafter_structural_conversion" />
+            <owl:allValuesFrom rdf:resource="#chemical_mediatorcafter_structural_conversion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls">
+    <rdfs:label>extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="chemical_mediatorcafter_structural_conversion_Role">
+    <rdfs:label>chemical_mediatorcafter_structural_conversion_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#chemical_mediatorcafter_structural_conversion" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="chemical_mediatorcafter_structural_conversion">
+    <rdfs:label>chemical_mediatorcafter_structural_conversion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender__Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender__Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_2" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_signalization" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_signalization" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_of_response_Role" />
+            <owl:allValuesFrom rdf:resource="#result_of_response_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_of_response" />
+            <owl:allValuesFrom rdf:resource="#result_of_response" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_receptor_cell" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_acting_chemical_mediator" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.result" />
+            <owl:allValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.result" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_">
+    <rdfs:label>intracellular_sub-processes__signal_sender_</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Blank_a_a"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_on_the_receptor_cell" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_chemical_mediator_outside_the_cell_Role" />
+            <owl:allValuesFrom rdf:resource="#chemical_mediator_outside_the_cell_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_chemical_mediator_outside_the_cell" />
+            <owl:allValuesFrom rdf:resource="#chemical_mediator_outside_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="chemical_mediator_outside_the_cell_Role">
+    <rdfs:label>chemical_mediator_outside_the_cell_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#chemical_mediator_outside_the_cell" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="chemical_mediator_outside_the_cell">
+    <rdfs:label>chemical_mediator_outside_the_cell</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#chemical_mediator_outside_the_cell_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role_signalization">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role_signalization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_signalization">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_signalization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_signalization" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_of_changing_point" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator">
+    <rdfs:label>intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="result_of_response_Role">
+    <rdfs:label>result_of_response_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#result_of_response" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_of_response.chemical_mediator_Role" />
+            <owl:allValuesFrom rdf:resource="#result_of_response.chemical_mediator_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_result_of_response.chemical_mediator" />
+            <owl:allValuesFrom rdf:resource="#result_of_response.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="result_of_response">
+    <rdfs:label>result_of_response</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="result_of_response.chemical_mediator_Role">
+    <rdfs:label>result_of_response.chemical_mediator_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#result_of_response_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#result_of_response.chemical_mediator" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_response_content" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="result_of_response.chemical_mediator">
+    <rdfs:label>result_of_response.chemical_mediator</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#result_of_response.chemical_mediator_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="drug">
+    <rdfs:label>drug</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_product_attributes_Role" />
+            <owl:allValuesFrom rdf:resource="#product_attributes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_product_attributes" />
+            <owl:allValuesFrom rdf:resource="#product_attributes" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_product_attributes_Role" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_product_attributes" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_component_molecules" />
+            <owl:allValuesFrom rdf:resource="#component_molecules" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Single_drug_molecule" />
+            <owl:allValuesFrom rdf:resource="#Single_drug_molecule" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_component_molecules" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_Single_drug_molecule" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="product_attributes_Role">
+    <rdfs:label>product_attributes_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#drug" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#product_attributes" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_drug_name" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_drug_name" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_drug_name_code" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_drug_name_code" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_hot_number" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_hot_number" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_development_state" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="product_attributes">
+    <rdfs:label>product_attributes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#product_attributes_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="component_molecules">
+    <rdfs:label>component_molecules</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#drug" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#Single_drug_molecule" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_name_of_chemical_mole" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_name_of_chemical_mole" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_general_name_Role" />
+            <owl:allValuesFrom rdf:resource="#general_name_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_general_name" />
+            <owl:allValuesFrom rdf:resource="#general_name" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_general_name_Role" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_general_name" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Single_drug_molecule">
+    <rdfs:label>Single_drug_molecule</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="general_name_Role">
+    <rdfs:label>general_name_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#component_molecules" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#general_name" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_CAS_registry_number" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_CAS_registry_number" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="general_name">
+    <rdfs:label>general_name</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#general_name_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Medicinal_action">
+    <rdfs:label>Medicinal_action</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_unit_Role" />
+            <owl:allValuesFrom rdf:resource="#action_unit_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_unit" />
+            <owl:allValuesFrom rdf:resource="#action_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_unit_Role" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_action_unit" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="action_unit_Role">
+    <rdfs:label>action_unit_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#Medicinal_action" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#action_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_agent" />
+            <owl:allValuesFrom rdf:resource="#Single_drug_molecule" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_agent" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_response_Role" />
+            <owl:allValuesFrom rdf:resource="#physiological_response_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_response" />
+            <owl:allValuesFrom rdf:resource="#physiological_response" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_response_Role" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_response" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="action_unit">
+    <rdfs:label>action_unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Blank_a_a_a"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#action_unit_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="physiological_response_Role">
+    <rdfs:label>physiological_response_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#action_unit_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#physiological_response" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_condition" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_degree" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="physiological_response">
+    <rdfs:label>physiological_response</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Drug_molecule_-_target_interaction_3"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#physiological_response_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="physiological_chain">
+    <rdfs:label>physiological_chain</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit_Role" />
+            <owl:allValuesFrom rdf:resource="#physiological_state_unit_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit" />
+            <owl:allValuesFrom rdf:resource="#physiological_state_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit_Role" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="physiological_state_unit_Role">
+    <rdfs:label>physiological_state_unit_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#physiological_chain" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#physiological_state_unit" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_cause" />
+            <owl:allValuesFrom>
+                <owl:Class>
+                    <owl:unionOf rdf:parseType="Collection">
+                        <owl:Class rdf:about="#physiological_state" />
+                        <owl:Class rdf:about="#Drug_molecule_-_target_interaction_3" />
+                    </owl:unionOf>
+                </owl:Class>
+            </owl:allValuesFrom>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_physiological_state_unit.result" />
+            <owl:allValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="physiological_state_unit">
+    <rdfs:label>physiological_state_unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#physiological_state"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#physiological_state_unit_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="physiological_state">
+    <rdfs:label>physiological_state</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Any" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#physiological_state_unit_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_object_target_structure_" />
+            <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_featured_object_Role" />
+            <owl:allValuesFrom rdf:resource="#featured_object_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_featured_object" />
+            <owl:allValuesFrom rdf:resource="#featured_object" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="featured_object_Role">
+    <rdfs:label>featured_object_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf rdf:resource="#CONTEXT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#physiological_state" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#featured_object" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_generic_quality_Role" />
+            <owl:allValuesFrom rdf:resource="#generic_quality_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_generic_quality" />
+            <owl:allValuesFrom rdf:resource="#generic_quality" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="featured_object">
+    <rdfs:label>featured_object</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+</owl:Class>
+<owl:Class rdf:ID="generic_quality_Role">
+    <rdfs:label>generic_quality_Role</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-CONCEPT" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dependsOn" />
+            <owl:someValuesFrom rdf:resource="#featured_object_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#heldBy" />
+            <owl:someValuesFrom rdf:resource="#generic_quality" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#has_quality_value" />
+            <owl:allValuesFrom rdf:resource="#Any" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="generic_quality">
+    <rdfs:label>generic_quality</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#ROLE-HOLDER" />
+    <owl:equivalentClass>
+        <owl:Class>            <owl:intersectionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="#ROLE-HOLDER"/>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#heldBy"/>
+                    <owl:someValuesFrom rdf:resource="#Any"/>
+                </owl:Restriction>
+                <owl:Restriction>                    <owl:onProperty rdf:resource="#plays"/>
+                    <owl:someValuesFrom rdf:resource="#generic_quality_Role"/>
+                </owl:Restriction>
+            </owl:intersectionOf>
+        </owl:Class>
+    </owl:equivalentClass>
+</owl:Class>
+<owl:Class rdf:ID="Blank">
+    <rdfs:label>Blank</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#NotDefinedClass" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#Signal_transduction_process_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Blank_a">
+    <rdfs:label>Blank_a</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#NotDefinedClass" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#extracellular_sub-processes_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Blank_a_a">
+    <rdfs:label>Blank_a_a</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#NotDefinedClass" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#intracellular_sub-processes__signal_sender__Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Blank_a_a_a">
+    <rdfs:label>Blank_a_a_a</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#NotDefinedClass" />
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mayPlay" />
+            <owl:someValuesFrom rdf:resource="#action_unit_Role" />
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+<owl:ObjectProperty rdf:ID="hasPart">
+    <rdfs:label>hasPart</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasAttribute">
+    <rdfs:label>hasAttribute</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasPart" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasStructualComponent">
+    <rdfs:label>hasStructualComponent</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="mayPlay">
+    <rdfs:label>mayPlay</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="heldBy">
+    <rdfs:label>heldBy</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="dependsOn">
+    <rdfs:label>dependsOn</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="plays">
+    <rdfs:label>plays</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_target_process">
+    <rdfs:label>has_target_process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_resultant_effect_Role">
+    <rdfs:label>has_resultant_effect_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_resultant_effect">
+    <rdfs:label>has_resultant_effect</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_way_of_action_Role">
+    <rdfs:label>has_way_of_action_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_way_of_action_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_way_of_action">
+    <rdfs:label>has_way_of_action</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_way_of_action"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_action_type">
+    <rdfs:label>has_action_type</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_action_type"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_result">
+    <rdfs:label>has_physiological_result</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process_Role">
+    <rdfs:label>has_Signal_transduction_process_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process">
+    <rdfs:label>has_Signal_transduction_process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_producing_cell">
+    <rdfs:label>has_producing_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_producing_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_produced_compound">
+    <rdfs:label>has_produced_compound</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_produced_compound"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_main_chemical_mediator">
+    <rdfs:label>has_main_chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_main_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_Role">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_Role</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process.precursor">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process.precursor</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process.precursor"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_uptake_organ">
+    <rdfs:label>has_uptake_organ</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_uptake_organ"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process.precursor.★uptake_method取り込み方法">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process.precursor.★uptake_method取り込み方法</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process.precursor.★uptake_method取り込み方法"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_Role_synthesis"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.acting_enzyme">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.acting_enzyme</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.acting_enzyme"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.produced_chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.produced_chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator.produced_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_Role_chemical_compound"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.acting_enzyme">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.acting_enzyme</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.acting_enzyme"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.produced_chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.produced_chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.part_of_signal_transduction_process_synthesis.chemical_mediator_chemical_compound.produced_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_Role">
+    <rdfs:label>has_Signal_transduction_process.sub-process_Role</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process">
+    <rdfs:label>has_Signal_transduction_process.sub-process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process.chemical_mediator_Role">
+    <rdfs:label>has_Signal_transduction_process.sub-process.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.sub-process.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process.chemical_mediator.★uptake_method取り込み方法">
+    <rdfs:label>has_Signal_transduction_process.sub-process.chemical_mediator.★uptake_method取り込み方法</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process.chemical_mediator.★uptake_method取り込み方法"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_Role_reuptake">
+    <rdfs:label>has_Signal_transduction_process.sub-process_Role_reuptake</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_Role_reuptake"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_reuptake">
+    <rdfs:label>has_Signal_transduction_process.sub-process_reuptake</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_reuptake"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_reuptake.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.sub-process_reuptake.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_reuptake.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_Role_metabolism">
+    <rdfs:label>has_Signal_transduction_process.sub-process_Role_metabolism</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_Role_metabolism"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_metabolism">
+    <rdfs:label>has_Signal_transduction_process.sub-process_metabolism</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_metabolism"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role">
+    <rdfs:label>has_Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_metabolism.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.sub-process_metabolism.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.acting_enzyme">
+    <rdfs:label>has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.acting_enzyme</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.acting_enzyme"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.produced_chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.produced_chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_metabolism.chemical_mediator.produced_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_Role_secretion">
+    <rdfs:label>has_Signal_transduction_process.sub-process_Role_secretion</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_Role_secretion"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_secretion">
+    <rdfs:label>has_Signal_transduction_process.sub-process_secretion</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_secretion"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_secretion.chemical_mediator_Role">
+    <rdfs:label>has_Signal_transduction_process.sub-process_secretion.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_secretion.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Signal_transduction_process.sub-process_secretion.chemical_mediator">
+    <rdfs:label>has_Signal_transduction_process.sub-process_secretion.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_Signal_transduction_process.sub-process_secretion.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_★part_of_signal_transduction_process_to_stimulate_secretion">
+    <rdfs:label>has_★part_of_signal_transduction_process_to_stimulate_secretion</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_★part_of_signal_transduction_process_to_stimulate_secretion"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes_Role">
+    <rdfs:label>has_extracellular_sub-processes_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes">
+    <rdfs:label>has_extracellular_sub-processes</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_released_chemical_mediator">
+    <rdfs:label>has_released_chemical_mediator</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_released_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_main_chemical_mediator_1_">
+    <rdfs:label>has_main_chemical_mediator_1_</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_main_chemical_mediator_1_"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_acting_compound">
+    <rdfs:label>has_acting_compound</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_acting_compound"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process_Role">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process_Role</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_passing_organ">
+    <rdfs:label>has_passing_organ</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_passing_organ"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process_Role_structural_conversion_outside_the_cell_walls"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls">
+    <rdfs:label>has_extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_extracellular_sub-processes.part_of_signal_transduction_process_structural_conversion_outside_the_cell_walls"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediatorcafter_structural_conversion_Role">
+    <rdfs:label>has_chemical_mediatorcafter_structural_conversion_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediatorcafter_structural_conversion_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediatorcafter_structural_conversion">
+    <rdfs:label>has_chemical_mediatorcafter_structural_conversion</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediatorcafter_structural_conversion"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediatorcafter_structural_conversion.acting_enzyme">
+    <rdfs:label>has_chemical_mediatorcafter_structural_conversion.acting_enzyme</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediatorcafter_structural_conversion.acting_enzyme"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender__Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender__Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator.★protein_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator.★protein_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process.chemical_mediator.★protein_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_on_the_receptor_cell">
+    <rdfs:label>has_result_on_the_receptor_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_on_the_receptor_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_activation_of_the_ion_channel_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_activation_of_the_ion_channel_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role__transation_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process__transation_on_the_cell_membrane.chemical_mediator_into_the_cell.★protein_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediator_outside_the_cell_Role">
+    <rdfs:label>has_chemical_mediator_outside_the_cell_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediator_outside_the_cell_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediator_outside_the_cell">
+    <rdfs:label>has_chemical_mediator_outside_the_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediator_outside_the_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_chemical_mediator_outside_the_cell.★protein_on_the_cell_membrane">
+    <rdfs:label>has_chemical_mediator_outside_the_cell.★protein_on_the_cell_membrane</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_chemical_mediator_outside_the_cell.★protein_on_the_cell_membrane"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role_signalization">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role_signalization</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_signalization"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_signalization">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_signalization</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_signalization.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_signalizing_result">
+    <rdfs:label>has_signalizing_result</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_signalizing_result"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_binding_to_the_nuclear_receptor"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor.chemical_mediator">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_binding_to_the_nuclear_receptor.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasStructualComponent" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_Role_change_of_cell_function"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.sub-process_change_of_cell_function.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_of_changing_point">
+    <rdfs:label>has_result_of_changing_point</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_of_changing_point"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_of_response_Role">
+    <rdfs:label>has_result_of_response_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_of_response_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_of_response">
+    <rdfs:label>has_result_of_response</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_of_response"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_of_response.chemical_mediator_Role">
+    <rdfs:label>has_result_of_response.chemical_mediator_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_of_response.chemical_mediator_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_result_of_response.chemical_mediator">
+    <rdfs:label>has_result_of_response.chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_result_of_response.chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_response_content">
+    <rdfs:label>has_response_content</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_response_content"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_receptor_cell">
+    <rdfs:label>has_receptor_cell</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_receptor_cell"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_acting_chemical_mediator">
+    <rdfs:label>has_acting_chemical_mediator</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_acting_chemical_mediator"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_intracellular_sub-processes__signal_sender_.result">
+    <rdfs:label>has_intracellular_sub-processes__signal_sender_.result</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_intracellular_sub-processes__signal_sender_.result"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_product_attributes_Role">
+    <rdfs:label>has_product_attributes_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_product_attributes">
+    <rdfs:label>has_product_attributes</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_drug_name">
+    <rdfs:label>has_drug_name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_drug_name"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_drug_name_code">
+    <rdfs:label>has_drug_name_code</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_drug_name_code"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_hot_number">
+    <rdfs:label>has_hot_number</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_hot_number"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_development_state">
+    <rdfs:label>has_development_state</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_development_state"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_component_molecules">
+    <rdfs:label>has_component_molecules</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_Single_drug_molecule">
+    <rdfs:label>has_Single_drug_molecule</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_name_of_chemical_mole">
+    <rdfs:label>has_name_of_chemical_mole</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_name_of_chemical_mole"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_general_name_Role">
+    <rdfs:label>has_general_name_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_general_name_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_general_name">
+    <rdfs:label>has_general_name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_general_name"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_CAS_registry_number">
+    <rdfs:label>has_CAS_registry_number</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_CAS_registry_number"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_action_unit_Role">
+    <rdfs:label>has_action_unit_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_action_unit">
+    <rdfs:label>has_action_unit</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_agent">
+    <rdfs:label>has_agent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_agent"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_response_Role">
+    <rdfs:label>has_physiological_response_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_physiological_response_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_response">
+    <rdfs:label>has_physiological_response</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_physiological_response"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_condition">
+    <rdfs:label>has_condition</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_condition"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_degree">
+    <rdfs:label>has_degree</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_degree"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_state_unit_Role">
+    <rdfs:label>has_physiological_state_unit_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_state_unit">
+    <rdfs:label>has_physiological_state_unit</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_cause">
+    <rdfs:label>has_cause</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_cause"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_physiological_state_unit.result">
+    <rdfs:label>has_physiological_state_unit.result</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_physiological_state_unit.result"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_object_target_structure_">
+    <rdfs:label>has_object_target_structure_</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_featured_object_Role">
+    <rdfs:label>has_featured_object_Role</rdfs:label>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_featured_object">
+    <rdfs:label>has_featured_object</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_generic_quality_Role">
+    <rdfs:label>has_generic_quality_Role</rdfs:label>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_generic_quality_Role"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_generic_quality">
+    <rdfs:label>has_generic_quality</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_generic_quality"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="has_quality_value">
+    <rdfs:label>has_quality_value</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#hasRole" />
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+        <rdf:Description rdf:about="#plays"/>
+        <rdf:Description rdf:about="#has_quality_value"/>
+    </owl:propertyChainAxiom>
+</owl:ObjectProperty>
+</rdf:RDF>
+
