@@ -23,7 +23,7 @@ File list:
 * OWL (simple) format
 * OWL (detailed) format
 
-*RDF and OWL files were produced from the original HOZO XML format files by using the export function in HOZO-Ontology Editor. Please note that RDF and OWL (simple) format represent only main concepts (classes) and relationships in original Hozo format because some differences of ontology representation model. OWL (detailed) format represents all information in Hozo format based-on the role representation model [8] while some model is improved using OWL2 from previous one [9]. 
+*RDF and OWL files were produced from the original HOZO XML format files by using the export function in HOZO-Ontology Editor. Please note that RDF and OWL (simple) format represent only main concepts (classes) and relationships in original Hozo format because some differences of ontology representation model. OWL (detailed) format represents almost all information in Hozo format based-on the role representation model [8] while some model is improved using OWL2 from previous one [9]. 
 
 
 
